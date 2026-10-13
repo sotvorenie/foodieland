@@ -17,3 +17,23 @@ body {
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  @include hover() {
+    color: var(--accent);
+  }
+}
+
+button {
+  cursor: pointer;
+}

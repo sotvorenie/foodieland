@@ -19,7 +19,11 @@
   --font-family-base: 'Inter';
 
   --container-width: #{rem(1700)};
-  --container-padding-x: #{rem(16)};
+  --container-padding-x: #{rem(50)};
 
   --transition-duration: 0.2s;
+
+  @include tablet {
+    --container-padding-x: #{rem(16)};
+  }
 }
