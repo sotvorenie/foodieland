@@ -1,0 +1,32 @@
+@use 'helpers' as *;
+
+@utility abs-center {
+  @include abs-center;
+}
+
+@utility abs-x {
+  @include abs-x;
+}
+
+@utility abs-y {
+  @include abs-y;
+}
+
+@utility square-* {
+  width: calc(var(--spacing) * --value(integer)) !important;
+  min-width: calc(var(--spacing) * --value(integer)) !important;
+  height: calc(var(--spacing) * --value(integer)) !important;
+  min-height: calc(var(--spacing) * --value(integer)) !important;
+}
+
+@utility line-clamp-* {
+  display: -webkit-box;
+  -webkit-line-clamp: --value(integer);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+@utility bg-brand-gradient {
+  background: var(--gradient);
+}

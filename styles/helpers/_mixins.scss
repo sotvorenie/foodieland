@@ -1,0 +1,50 @@
+@use 'sass:math';
+@use 'functions' as *;
+
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: fluid($max, $min);
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin abs-x {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+
+@mixin abs-y {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+@mixin square($size) {
+  width: rem($size) !important;
+  min-width: rem($size) !important;
+  height: rem($size) !important;
+  min-height: rem($size) !important;
+}
+
+@mixin fluid-square($max, $min) {
+  aspect-ratio: 1 / 1;
+
+  width: fluid($max, $min);
+  height: fluid($max, $min);
+
+  min-width: fluid($max, $min);
+  min-height: fluid($max, $min);
+}
+
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+}

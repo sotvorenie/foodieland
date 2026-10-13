@@ -1,0 +1,25 @@
+@use 'helpers' as *;
+
+:root {
+  --light: #FFFFFF;
+
+  --dark: #000000;
+  --dark-60: #00000099;
+  --dark-40: #00000066;
+  --dark-10: #0000001A;
+  --dark-5: #0000000D;
+
+  --gray: #DBE2E5;
+
+  --accent: #FF6363;
+  --blue: #E7FAFE;
+
+  --gradient: linear-gradient(#E7F9FD 0%, #E7F9FD 100%);
+
+  --font-family-base: 'Inter';
+
+  --container-width: #{rem(1700)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+}

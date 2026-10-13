@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-light: var(--light);
+  --color-dark: var(--dark);
+  --color-dark-60: var(--dark-60);
+  --color-dark-40: var(--dark-40);
+  --color-dark-10: var(--dark-10);
+  --color-dark-5: var(--dark-5);
+  --color-gray: var(--gray);
+  --color-blue: var(--blue);
+  --color-accent: var(--accent);
+}
