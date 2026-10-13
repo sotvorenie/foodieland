@@ -12,6 +12,10 @@ body {
   font-family: var(--font-family-base), sans-serif;
 }
 
+main {
+  flex-grow: 1;
+}
+
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
