@@ -11,7 +11,7 @@ function IndexBanner() {
     const [isDesktop, setIsDesktop] = useState<boolean>(false)
 
     useEffect(() => {
-        const media = window.matchMedia('(min-width: 1440px)')
+        const media = window.matchMedia('(min-width: 1320px)')
         setIsDesktop(media.matches)
 
         const listener = (e: MediaQueryListEvent) => setIsDesktop(e.matches)

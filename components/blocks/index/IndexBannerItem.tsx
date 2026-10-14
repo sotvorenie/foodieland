@@ -75,8 +75,8 @@ function Person({avatarUrl, name, date}: PersonProps) {
 
 function IndexBannerItem() {
     return (
-        <div className="flex flex-col-reverse lg:grid grid-cols-[620fr_660fr] rounded-[1.5rem] lg:rounded-[2.375rem] overflow-hidden md:pt-40 lg:pt-0 lg:min-h-150">
-            <div className="p-4 md:p-6 xl:p-12.5 bg-blue flex flex-col md:rounded-[1.5rem] lg:rounded-none">
+        <div className="bg-blue flex flex-col-reverse lg:grid grid-cols-[620fr_660fr] rounded-[1.5rem] lg:rounded-[2.375rem] overflow-hidden md:pt-40 lg:pt-0 lg:min-h-150">
+            <div className="p-4 md:p-6 xl:p-12.5 flex flex-col md:rounded-[1.5rem] lg:rounded-none">
                 <Chip text="Hot Recipes"
                       iconHref="/images/index/banner-chip.png"
                 />

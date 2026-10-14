@@ -5,8 +5,16 @@
 }
 .swiper-slide {
 
-  @include laptop-above {
+  @include laptop-s-above {
     width: rem(1280);
+
+    .img-container {
+      transition: opacity var(--transition-duration-big);
+    }
+
+    &:not(.swiper-slide-active) .img-container {
+      opacity: 0;
+    }
   }
 
   & > div {
@@ -15,7 +23,7 @@
 }
 .swiper-slide-active {
 
-  @include laptop-above {
+  @include laptop-s-above {
     width: rem(1280);
 
     & > div {
