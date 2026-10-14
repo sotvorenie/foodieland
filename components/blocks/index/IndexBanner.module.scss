@@ -1,0 +1,25 @@
+@use '../../../styles/helpers' as *;
+
+.swiper-wrapper {
+    align-items: center;
+}
+.swiper-slide {
+
+  @include laptop-above {
+    width: rem(1280);
+  }
+
+  & > div {
+    transition: min-height var(--transition-duration-big);
+  }
+}
+.swiper-slide-active {
+
+  @include laptop-above {
+    width: rem(1280);
+
+    & > div {
+      min-height: rem(660);
+    }
+  }
+}

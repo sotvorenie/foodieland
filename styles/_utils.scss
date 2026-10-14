@@ -1,34 +1,23 @@
 @use 'helpers' as *;
 
-@utility abs-center {
-  @include abs-center;
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
 }
 
-@utility abs-x {
-  @include abs-x;
-}
-
-@utility abs-y {
-  @include abs-y;
-}
-
-@utility square-* {
-  width: calc(var(--spacing) * --value(integer)) !important;
-  min-width: calc(var(--spacing) * --value(integer)) !important;
-  height: calc(var(--spacing) * --value(integer)) !important;
-  min-height: calc(var(--spacing) * --value(integer)) !important;
-}
-
-@utility line-clamp-* {
-  display: -webkit-box;
-  -webkit-line-clamp: --value(integer);
-  -webkit-box-orient: vertical;
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
   overflow: hidden;
-  word-wrap: break-word;
-}
+  position: relative;
 
-@utility bg-brand-gradient {
-  background: var(--gradient);
+  img, video, iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .recolor-svg {

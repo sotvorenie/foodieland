@@ -1,8 +1,8 @@
 import {links} from "@/data/links";
 
 import Logo from "@/components/ui/Logo";
-import NavLinks from "@/components/blocks/header/NavLinks";
-import SocialLinks from "@/components/blocks/header/SocialLinks";
+import NavLinks from "@/components/blocks/NavLinks";
+import SocialLinks from "@/components/blocks/SocialLinks";
 
 function Footer() {
     return (
@@ -12,7 +12,7 @@ function Footer() {
                     <div className="flex flex-col gap-4">
                         <Logo/>
 
-                        <span className="text-dark-60 leading-[1.75]">Lorem ipsum dolor sit amet, consectetuipisicing elit, </span>
+                        <span className="text-dark-60">Lorem ipsum dolor sit amet, consectetuipisicing elit, </span>
                     </div>
 
                     <NavLinks links={links.slice(0, links.length)} listClassName="flex-col !gap-4 md:!gap-10 md:flex-row"/>

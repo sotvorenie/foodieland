@@ -1,3 +1,4 @@
+@import 'swiper/css';
 @import "tailwindcss";
 
 @theme inline {
@@ -10,4 +11,48 @@
   --color-gray: var(--gray);
   --color-blue: var(--blue);
   --color-accent: var(--accent);
+}
+
+@utility abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@utility abs-x {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+}
+
+@utility abs-y {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+@utility square-* {
+    width: calc(var(--spacing) * --value(number)) !important;
+    min-width: calc(var(--spacing) * --value(number)) !important;
+    height: calc(var(--spacing) * --value(number)) !important;
+    min-height: calc(var(--spacing) * --value(number)) !important;
+}
+
+@utility line-clamp-* {
+    display: -webkit-box;
+    -webkit-line-clamp: --value(integer);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+@utility bg-brand-gradient {
+    background: var(--gradient);
+}
+
+@utility flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

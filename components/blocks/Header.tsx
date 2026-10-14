@@ -3,8 +3,8 @@ import Image from "next/image";
 import {links} from "@/data/links";
 
 import Logo from "@/components/ui/Logo";
-import NavLinks from "@/components/blocks/header/NavLinks";
-import SocialLinks from "@/components/blocks/header/SocialLinks";
+import NavLinks from "@/components/blocks/NavLinks";
+import SocialLinks from "@/components/blocks/SocialLinks";
 
 function Header() {
     return (
