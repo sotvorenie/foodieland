@@ -2,18 +2,23 @@ import {ButtonHTMLAttributes, ReactNode} from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     text: string
+    mode?: 'dark' | 'light'
     className?: string
     beforeChildren?: ReactNode
     afterChildren?: ReactNode
 }
 
-function ButtonUi({text, beforeChildren, afterChildren, className, ...rest}: ButtonProps) {
+function ButtonUi({text, mode = 'dark', beforeChildren, afterChildren, className = '', ...rest}: ButtonProps) {
     return (
-        <button className={`bg-dark text-light flex-center gap-4 min-h-10 md:min-h-15 md:min-w-45 px-2 md:px-9 py-3 md:py-4.5 rounded-[.7rem] md:rounded-[1rem] ${className}`}
+        <button className={`
+                    flex-center gap-4 min-h-10 md:min-h-15 md:min-w-45 p-3 rounded-[.7rem] md:rounded-[1rem] 
+                    ${mode === 'dark' ? 'bg-dark md:py-4.5 md:px-9 text-sm text-light' : 'bg-blue md:py-5 md:px-6.5'}
+                    ${className}`
+                }
                 {...rest}
         >
             {beforeChildren}
-            <span className="font-semibold text-sm text-light leading-none -tracking-[0.02em]">{text}</span>
+            <span className="font-semibold leading-none -tracking-[0.02em]">{text}</span>
             {afterChildren}
         </button>
     )

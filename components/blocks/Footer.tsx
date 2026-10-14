@@ -6,7 +6,7 @@ import SocialLinks from "@/components/blocks/SocialLinks";
 
 function Footer() {
     return (
-        <footer>
+        <footer className="mt-10 md:mt-20 lg:mt-40">
             <div className="container">
                 <div className="border-b border-gray pb-4 lg:pb-6 lg:pb-12 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
                     <div className="flex flex-col gap-4">

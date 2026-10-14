@@ -21,7 +21,7 @@ function IndexBanner() {
     }, [])
 
     return (
-        <div className="mt-5 lg:mt-10 mb-20 lg:mb-40">
+        <div className="index-banner mt-5 lg:mt-10">
             <div className={isDesktop ? '' : 'container'}>
                 <Swiper modules={[Autoplay]}
                         slidesPerView='auto'
@@ -34,8 +34,8 @@ function IndexBanner() {
                             disableOnInteraction: false,
                         }}
                 >
-                    {Array.from({length: 6}).map(_ => (
-                        <SwiperSlide className="select-none">
+                    {Array.from({length: 6}).map((_, index) => (
+                        <SwiperSlide key={index} className="select-none">
                             <IndexBannerItem/>
                         </SwiperSlide>
                     ))}

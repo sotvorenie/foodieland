@@ -1,33 +1,37 @@
 @use '../../../styles/helpers' as *;
 
-.swiper-wrapper {
+.index-banner {
+
+  .swiper-wrapper {
     align-items: center;
-}
-.swiper-slide {
-
-  @include laptop-s-above {
-    width: rem(1280);
-
-    .img-container {
-      transition: opacity var(--transition-duration-big);
-    }
-
-    &:not(.swiper-slide-active) .img-container {
-      opacity: 0;
-    }
   }
 
-  & > div {
-    transition: min-height var(--transition-duration-big);
-  }
-}
-.swiper-slide-active {
+  .swiper-slide {
 
-  @include laptop-s-above {
-    width: rem(1280);
+    @include laptop-s-above {
+      width: rem(1280);
+
+      .img-container {
+        transition: opacity var(--transition-duration-big);
+      }
+
+      &:not(.swiper-slide-active) .img-container {
+        opacity: 0;
+      }
+    }
 
     & > div {
-      min-height: rem(660);
+      transition: min-height var(--transition-duration-big);
+    }
+  }
+  .swiper-slide-active {
+
+    @include laptop-s-above {
+      width: rem(1280);
+
+      & > div {
+        min-height: rem(660);
+      }
     }
   }
 }
